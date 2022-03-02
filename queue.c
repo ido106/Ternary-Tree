@@ -9,12 +9,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static void iniQueue(Queue* q);
-static int isEmpty(Queue* q);
-static void enQueue(Queue* q, void* key, Member* fHead);
-static void* deQueue(Queue* q);
-static void destroyNodes(QNode* node);
-static void destoryQueue(Queue* q);
+void iniQueue(Queue* q);
+int isEmpty(Queue* q);
+void enQueue(Queue* q, void* key, Member* fHead);
+void* deQueue(Queue* q);
+void destroyNodes(QNode* node);
+void destoryQueue(Queue* q);
 
 /***********************************************************
 * Function Name: iniQueue
