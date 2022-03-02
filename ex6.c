@@ -12,15 +12,15 @@
 #include <stdio.h>
 #include <ctype.h>
 
-static Member* newMember(char* name, int id, Member* fHead,Member* father);
-static Member* findMember(int id, Member* currentMember);
-static void getNameID(char* name, int* id);
-static void printPrintMenu();
-static void printPrintMenu();
-static void printPreOrder(Member* root);
-static void printLeftOrder(Member* root);
-static void pBfsTree(char* name, int id);
-static void stayHomeBfs(char* name, int id);
+Member* newMember(char* name, int id, Member* fHead,Member* father);
+Member* findMember(int id, Member* currentMember);
+void getNameID(char* name, int* id);
+void printPrintMenu();
+void printPrintMenu();
+void printPreOrder(Member* root);
+void printLeftOrder(Member* root);
+void pBfsTree(char* name, int id);
+void stayHomeBfs(char* name, int id);
 
 /*********************************************************************************************************
 * Function Name: superSpreader
