@@ -11,8 +11,9 @@ The Tern-ary family prepared well for Covid, so that each family member will mee
   >
 </p>
 
-Every family member has a name and ID, and ID number for two family members must be different.  
+Every family member has a name and ID, and the ID number of two different family members must be different.  
 The ternary tree supports the following operations:  
+```
 1) Exit
 2) Create a family
 3) Add a family member
@@ -26,6 +27,7 @@ The ternary tree supports the following operations:
 6) Super-spreader
 7) Vaccine
 8) Reprint the menu  
+```
 
 If a dynamic allocation fails, the message ```Malloc Failed!``` is printed, and then all the allocated memory is released.  
 <p align="left">
