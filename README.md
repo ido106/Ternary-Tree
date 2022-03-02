@@ -47,7 +47,7 @@ First we get the ID of the family member who wants to make an appointment: ```En
 
 ### Printing the family tree
 We will support four types of traversals: visual, pre-order, left-order, [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) *using generic Queue*.  
-I will give one example of the BFS print:  
+I will give one example of the BFS traversal:  
 The tree is:  
 <p align="left">
   <img 
@@ -70,11 +70,53 @@ Output:
 
 ### Quarantine
 If there is a suspicion that one of the family members is infected with Covid, all direct contacts are placed in isolation: the father and all the meetings.  
-From the previous example, if B is the suspected member the next message will be printed:  
+From the previous tree, if B is the suspected member the next message will be printed:  
 ```
 ‫!‪#StayHome‬‬ ‫‪A‬‬ ‫‪1‬‬
 ‫!‪#StayHome‬‬ ‫‪B‬‬ ‫‪2‬‬
 ‫!‪#StayHome‬‬ ‫‪C‬‬ ‫‪3‬‬
 ‫!‪#StayHome‬‬ ‫‪E‬‬ ‫‪5‬‬
 ‫!‪#StayHome‬‬ ‫‪F‬‬ ‫‪6‬‬
+```
+
+### Superspreader
+If there is now a suspicion of a superspreader, the father and all sub-tree go into quarantine, using *BFS traversal*.  
+From the previous tree, if B is the suspected member the next message will be printed:  
+```
+‫!‪#StayHome‬‬ ‫‪A‬‬ ‫‪1‬‬
+‫!‪#StayHome‬‬ ‫‪B‬‬ ‫‪2‬‬
+‫!‪#StayHome‬‬ ‫‪C‬‬ ‫‪3‬‬
+‫!‪#StayHome‬‬ ‫‪E‬‬ ‫‪5‬‬
+‫!‪#StayHome‬‬ ‫‪F‬‬ ‫‪6‬‬
+‫!‪#StayHome‬‬ ‫‪I‬‬ ‫‪9‬‬
+```
+
+### Vaccine
+One of the family members gets vaccinated. The Trin-ary family decided to take less care of the vaccinated family members and release them from the tree (the memory should be released).  
+From the previous tree, if B got vaccinated the next message will be printed:  
+```
+‫‪C‬‬ ‫‪ID:‬‬ ‫‪3‬‬ ‫!‪Survived‬‬
+‫‪E‬‬ ‫‪ID:‬‬ ‫‪5‬‬ ‫!‪Survived‬‬
+‫‪I‬‬ ‫‪ID:‬‬ ‫‪9‬‬ ‫!‪Survived‬‬
+‫‪F‬‬ ‫‪ID:‬‬ ‫‪6‬‬ ‫!‪Survived‬‬
+‫‪B‬‬ ‫‪ID:‬‬ ‫‪2‬‬ ‫!‪Survived‬‬
+```  
+After the vaccination the new tree will look like this:  
+<p align="left">
+  <img 
+    width="300"
+    height="129"
+    src="https://user-images.githubusercontent.com/92651125/156392421-137d62cd-0fe4-4006-9125-b25ba95d43e2.png"
+  >
+</p>
+
+### Exit
+Yay! The plague is over and everyone survived  
+All memory is released in the same way as the previous task.  
+From the previous tree, the next message will be printed:
+```
+H ID: 8 Survived!
+D ID: 4 Survived!
+G ID: 7 Survived!
+A ID: 1 Survived!
 ```
