@@ -14,8 +14,8 @@ The Ternari family prepared well for Covid, so that each family member will meet
 Every family member has a name and ID, and ID number for two family members must be different.  
 The ternary tree supports the following operations:  
 1) Exit
-2) Create family
-3) Add family member
+2) Create a family
+3) Add a family member
 4) Print the family tree:  
     a) back to main menu
     b) printing the family tree visually
@@ -36,9 +36,19 @@ If a dynamic allocation fails, the message ```Malloc Failed!``` is printed, and 
   >
 </p>
 
-### Create family
+### Create a family
 The creation of the family tree will only occur when there are no family members yet.  
 If there are family members, the message ```The family has already been created``` in printed.  
 Otherwise, the user will enter the name and ID of the head of the family, the family tree is created and the message ```Hello (name), ID: (ID)``` is printed.  
 Then, we will allow to return to the main menu and the message ```Select the next operation (insert 7 for the entire menu):``` is printed.  
+Example:  
+<p align="left">
+  <img 
+    width="350"
+    height="243"
+    src="https://user-images.githubusercontent.com/92651125/156376040-d6512d8b-cd41-40b0-9f46-205320107ae6.png"
+  >
+</p>
 
+### Add a family member
+First we get the ID of the family member who wants to make an appointment: ```Enter the ID of the person who wants to make an appointment```. If the family member exists, we will receive the name and ID of the new family member and add him to the family tree. If there is a problem with one of the inputs (the first ID does not exist, the new ID is already in use, the family member already has 3 appointments) error message is printed.
